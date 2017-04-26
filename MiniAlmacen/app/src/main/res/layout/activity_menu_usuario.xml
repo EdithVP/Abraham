@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_menu_usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.abrahamxsaboter.minialmacen.menu_usuario">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <!--TITULO-->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/titulo_almacen"
+        android:text="CONTROL DE ALMACENES"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textAlignment="center"
+        android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|top">
+
+            <ImageView
+                android:id="@+id/img_pass"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/fondo"
+                />
+        </LinearLayout>
+
+        <!--Botones-->
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <!--Botones-->
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:theme="@style/boton"
+                android:onClick="AlmacenNuevo"
+                android:text="NUEVO ALMACEN +" />
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:theme="@style/boton"
+                android:text="REALIZAR CONSULTAS" />
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:theme="@style/boton"
+                android:onClick="CerrarSesion"
+                android:text="Cerrar Sesión"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:textSize="15dp"
+                android:theme="@style/boton"
+                android:drawableTop= "@drawable/ic_youtube"
+                android:onClick="AbrirYouTube"/>
+
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:textSize="15dp"
+                android:theme="@style/boton"
+                android:drawableTop= "@drawable/ic_soporte"
+                android:onClick="AbrirSoporte"/>
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:textSize="15dp"
+                android:theme="@style/boton"
+                android:drawableTop= "@drawable/ic_acerca"
+                android:onClick="AbrirAcercaDe"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
