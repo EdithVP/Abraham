@@ -77,6 +77,26 @@
                 android:value=".menu_usuario" />
 
         </activity>
+
+        <activity android:name=".Consultas"
+            android:parentActivityName=".menu_usuario">
+
+            <!-- Indica cual es el padre -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menu_usuario" />
+
+        </activity>
+        <activity android:name=".info_Alamacen"
+            android:parentActivityName=".Consultas">
+
+            <!-- Indica cual es el padre -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Consultas" />
+
+        </activity>
+
     </application>
 
 </manifest>

@@ -63,7 +63,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:theme="@style/boton"
-                android:text="REALIZAR CONSULTAS" />
+                android:text="REALIZAR CONSULTAS"
+                android:onClick="AbrirRealizarConculta"/>
             <Button
                 android:layout_marginTop="25dp"
                 android:layout_width="match_parent"

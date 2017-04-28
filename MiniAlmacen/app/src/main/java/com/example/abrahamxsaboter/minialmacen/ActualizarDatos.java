@@ -29,7 +29,8 @@ public class ActualizarDatos extends AppCompatActivity {
         startActivity(intent);
         Toast.makeText(getBaseContext(),"Actualización Cancelada", Toast.LENGTH_LONG).show();
     }
-    //Bloquea el boton "Atras" del telefono
+
+    /*//Bloquea el boton "Atras" del telefono
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
@@ -38,5 +39,5 @@ public class ActualizarDatos extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
 }

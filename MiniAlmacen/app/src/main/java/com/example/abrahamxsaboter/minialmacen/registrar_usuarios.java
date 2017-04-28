@@ -30,7 +30,7 @@ public class registrar_usuarios extends AppCompatActivity {
         startActivity(intent);
         Toast.makeText(getBaseContext(),"Cancelado", Toast.LENGTH_LONG).show();
     }
-
+/*
     //Bloquea el boton "Atras" del telefono
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -40,5 +40,5 @@ public class registrar_usuarios extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
 }

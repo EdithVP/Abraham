@@ -35,6 +35,11 @@ public class menu_usuario extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void AbrirRealizarConculta(View v) {
+        Intent intent = new Intent(this, Consultas.class);
+        startActivity(intent);
+    }
+
     public void AbrirYouTube(View v) {
         Uri uri = Uri.parse("https://www.youtube.com/channel/UCm_W9Ffk4EkCCEoncfIGHhw");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
