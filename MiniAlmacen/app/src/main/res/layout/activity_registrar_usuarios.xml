@@ -20,6 +20,7 @@
         android:id="@+id/titulo_almacen"
         android:text="REGISTRO DE USUARIOS"
         android:textSize="25dp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:textAlignment="center"
@@ -257,7 +258,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="150dp"
                 android:layout_height="70dp"
-                android:drawableTop="@drawable/ic_enviar"
+                android:drawableTop="@drawable/ic_registrar"
                 android:theme="@style/boton"
                 android:onClick="EnvioDatosCuenta"
                 android:text="CREAR CUENTA" />

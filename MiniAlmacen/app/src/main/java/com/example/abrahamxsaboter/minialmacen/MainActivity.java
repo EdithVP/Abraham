@@ -103,14 +103,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-    //Bloquea el boton "Atras" del telefono
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            // Esto es lo que hace mi botón al pulsar ir a atrás (UN mensaje)
-            //Toast.makeText(getApplicationContext(), "Click en Salir", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 }

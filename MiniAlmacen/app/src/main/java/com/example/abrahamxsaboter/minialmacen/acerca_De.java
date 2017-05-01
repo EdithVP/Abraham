@@ -31,8 +31,8 @@ public class acerca_De extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         contactos = new ArrayList();
-        contactos.add(new Contacto("Ortiz Hernandez Mari Carmen","5554683529","marycarmenortiz19@gmail.com","Diseñadora de la aplicación"));
         contactos.add(new Contacto("Mares Sánchez Abraham","5561178458","abrahamyeahmares@gmail.com","Programador de Base de Datos y Servidor"));
+        contactos.add(new Contacto("Ortiz Hernandez Mari Carmen","5554683529","marycarmenortiz19@gmail.com","Diseñadora de la aplicación"));
         contactos.add(new Contacto("Valentin Perez Edith","5547900160","edithvp0406@gmail.com","Diseñadora de la aplicación"));
         contactos.add(new Contacto("Vazquez Marcelo Alberto Abraham","5575397412","abrahamgears5555@gmail.com.com","Programador de la aplicación"));
 
@@ -66,15 +66,6 @@ public class acerca_De extends AppCompatActivity {
             }
         });
     }
-    //Bloquea el boton "Atras" del telefono
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            // Esto es lo que hace mi botón al pulsar ir a atrás (UN mensaje)
-            //Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+
 }
 

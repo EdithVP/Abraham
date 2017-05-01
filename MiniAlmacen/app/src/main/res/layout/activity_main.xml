@@ -23,6 +23,7 @@
                 android:id="@+id/titulo_almacen"
                 android:text="CONTROL DE ALMACENES"
                 android:textSize="25dp"
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:textAlignment="center"
@@ -43,7 +44,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Usuario"
+                    android:hint="Usuario / Correo"
                     app:counterEnabled="true"
                     app:counterMaxLength="15"
                     >
@@ -52,7 +53,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:maxLength="15"
-                            android:inputType="textAutoComplete"/>
+                            android:inputType="textEmailAddress"/>
                 </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 

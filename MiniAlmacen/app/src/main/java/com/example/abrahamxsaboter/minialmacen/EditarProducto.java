@@ -15,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,12 +27,12 @@ public class EditarProducto extends AppCompatActivity {
 
     private TextView nom_producto;
     private TextView descripcion;
-    //private TextView tipo;
+    private TextView tipo;
     private TextView cantidad;
 
     private String datoNomProducto;
     private String datoDescripcion;
-    //private String datoTipo;
+    private String datoTipo;
     private String datoCantidad;
 
     @Override
@@ -43,32 +45,42 @@ public class EditarProducto extends AppCompatActivity {
 
         datoNomProducto = bundle.getString("nom_producto");
         datoDescripcion = bundle.getString("descripcion");
-        //datoTipo = bundle.getString("tipo");
         datoCantidad = bundle.getString("cantidad");
-
+        datoTipo = bundle.getString("tipo");
 
         nom_producto = (TextView) findViewById(R.id.nomProducto);
         descripcion = (TextView) findViewById(R.id.Descripcion);
-        //tipo = (TextView) findViewById(R.id.Tipo);
+        tipo = (TextView) findViewById(R.id.Tipo);
         cantidad = (TextView) findViewById(R.id.Cantidad);
 
         nom_producto.setText(datoNomProducto);
         descripcion.setText(datoDescripcion);
-        //tipo.setText(datoTipo);
+        tipo.setText(datoTipo);
         cantidad.setText(datoCantidad);
 
     }
 
+
     public void EditData(View v){
+
         Intent intent = new Intent(this, NuevoProducto.class);
 
         intent.putExtra("nom_producto",datoNomProducto);
         intent.putExtra("descripcion",datoDescripcion);
-        //intent.putExtra("tipo",datoTipo);
+        intent.putExtra("tipo",datoTipo);
         intent.putExtra("cantidad",datoCantidad);
 
         //Inicia la actividad
         startActivity(intent);
+        finish();
+    }
+
+    public void ConfirmarAlmacen(View v){
+        Intent intent = new Intent(this, menu_usuario.class);
+        Toast.makeText(getBaseContext(),"Almacen creado", Toast.LENGTH_LONG).show();
+        //Inicia la actividad
+        startActivity(intent);
+        finish();
     }
 
     public void Cancelar(View v){
@@ -76,6 +88,7 @@ public class EditarProducto extends AppCompatActivity {
         Toast.makeText(getBaseContext(),"Registro De Productos Cancelado", Toast.LENGTH_LONG).show();
         //Inicia la actividad
         startActivity(intent);
+        finish();
     }
 
     public void  ActivaCamara(View view){
@@ -123,13 +136,20 @@ public class EditarProducto extends AppCompatActivity {
         }
     }
 
-    //Bloquea el boton "Atras" del telefono
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            //Esto es lo que hace mi botón al pulsar ir a atrás (UN mensaje)
-            //Toast.makeText(getApplicationContext(), "Click en Editar",Toast.LENGTH_SHORT).show();
-            return true;
+        // TODO Auto-generated method stub
+        if (keyCode == event.KEYCODE_BACK) {
+            Intent intent = new Intent(this, NuevoProducto.class);
+
+            intent.putExtra("nom_producto",datoNomProducto);
+            intent.putExtra("descripcion",datoDescripcion);
+            intent.putExtra("tipo",datoTipo);
+            intent.putExtra("cantidad",datoCantidad);
+
+            //Inicia la actividad
+            startActivity(intent);
+            finish();
         }
         return super.onKeyDown(keyCode, event);
     }

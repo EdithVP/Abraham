@@ -13,7 +13,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".registrar_usuarios"
+        <activity
+            android:name=".registrar_usuarios"
             android:parentActivityName=".MainActivity">
 
             <!-- Indica cual es el padre -->
@@ -30,10 +29,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity android:name=".menu_usuario" />
-
-        <activity android:name=".producto"
+        <activity
+            android:name=".producto"
             android:parentActivityName=".menu_usuario">
 
             <!-- Indica cual es el padre -->
@@ -41,62 +39,55 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".menu_usuario" />
         </activity>
-
-        <activity android:name=".acerca_De"
+        <activity
+            android:name=".acerca_De"
             android:parentActivityName=".acerca_De">
+
             <!-- Indica cual es el padre -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".acerca_De" />
         </activity>
-
-        <activity android:name=".Detalle_de_acercade"
+        <activity
+            android:name=".Detalle_de_acercade"
             android:parentActivityName=".acerca_De">
+
             <!-- Indica cual es el padre -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".acerca_De" />
         </activity>
-
-        <activity android:name=".EditarProducto" />
-
-        <activity android:name=".ActualizarDatos"
+        <activity android:name=".EditarProducto"></activity>
+        <activity
+            android:name=".ActualizarDatos"
             android:parentActivityName=".MainActivity">
+
             <!-- Indica cual es el padre -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".menu_usuario"/>
+                android:value=".menu_usuario" />
         </activity>
-
-        <activity android:name=".NuevoProducto"
+        <activity
+            android:name=".NuevoProducto"
             android:parentActivityName=".menu_usuario">
 
             <!-- Indica cual es el padre -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".menu_usuario" />
-
         </activity>
-
-        <activity android:name=".Consultas"
+        <activity
+            android:name=".Consultas"
             android:parentActivityName=".menu_usuario">
 
             <!-- Indica cual es el padre -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".menu_usuario" />
-
         </activity>
-        <activity android:name=".info_Alamacen"
-            android:parentActivityName=".Consultas">
-
-            <!-- Indica cual es el padre -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Consultas" />
-
-        </activity>
-
+        <activity android:name=".info_Alamacen"></activity>
+        <activity android:name=".actualizar_datos2"></activity>
+        <activity android:name=".actualizar_datos3"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class NuevoProducto extends AppCompatActivity {
@@ -18,8 +20,12 @@ public class NuevoProducto extends AppCompatActivity {
 
     private String datoNomProducto;
     private String datoDescripcion;
-    //private String datoTipo;
+    private String datoTipo;
     private String datoCantidad;
+    private String cadena,a;
+
+    Spinner combo;
+    String[] contenido = {"Elige el tipo de Producto","Herramienta","Material Didactico","Consumibles","Staf","Papeleria"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,41 +36,45 @@ public class NuevoProducto extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        combo = (Spinner)findViewById(R.id.ComboTipoP);
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,contenido);
+        combo.setAdapter(adaptador);
+
         Bundle bundle = getIntent().getExtras();
 
         if (bundle != null) {
             datoNomProducto = bundle.getString("nom_producto");
             datoDescripcion = bundle.getString("descripcion");
-            //datoTipo = bundle.getString("tipo");
             datoCantidad = bundle.getString("cantidad");
 
             nom_producto = (TextInputEditText) findViewById(R.id.id_nom_producto);
             descripcion = (TextInputEditText) findViewById(R.id.id_descripcion);
-            //tipo = (TextInputEditText) findViewById(R.id.ComboTipoP);
             cantidad = (TextInputEditText) findViewById(R.id.id_cantidad);
 
             nom_producto.setText(datoNomProducto);
             descripcion.setText(datoDescripcion);
-            //tipo.setText(datoTipo);
             cantidad.setText(datoCantidad);
-
         }
     }
 
     public void EnvioDatos(View v) {
         nom_producto = (TextInputEditText) findViewById(R.id.id_nom_producto);
         descripcion = (TextInputEditText) findViewById(R.id.id_descripcion);
-        //tipo = (TextInputEditText) findViewById(R.id.id_tipo);
+        combo = (Spinner)findViewById(R.id.ComboTipoP);
         cantidad = (TextInputEditText) findViewById(R.id.id_cantidad);
 
         Intent intent = new Intent(this, EditarProducto.class);
 
+        cadena = String.valueOf(contenido);
+
         intent.putExtra("nom_producto", nom_producto.getText().toString());
         intent.putExtra("descripcion", descripcion.getText().toString());
-        //intent.putExtra("tipo", tipo.getText().toString());
+        //intent.putExtra(String.valueOf(contenido), combo.getSelectedItem().toString());
+        intent.putExtra(String.valueOf(cadena = "tipo"), combo.getSelectedItem().toString());
         intent.putExtra("cantidad", cantidad.getText().toString());
 
         startActivity(intent);
+        finish();
 
     }
 
@@ -73,17 +83,8 @@ public class NuevoProducto extends AppCompatActivity {
         Toast.makeText(getBaseContext(), "Registro De Productos Cancelado", Toast.LENGTH_LONG).show();
         //Inicia la actividad
         startActivity(intent);
+        finish();
     }
 
-    //Bloquea el boton "Atras" del telefono
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            // Esto es lo que hace mi botón al pulsar ir a atrás (UN mensaje)
-            //Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 }
 

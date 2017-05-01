@@ -1,18 +1,24 @@
 package com.example.abrahamxsaboter.minialmacen;
 
-/**
- * Created by Abraham on 26/04/2017.
- */
-
 public class infoAlmacen {
 
     private String NombreAlmacen;
     private String NombreProducto;
     private String Descripcion;
-    public infoAlmacen(String nombre, String producto, String descripcion) {
+    private String Cantidad;
+    public infoAlmacen(String nombre, String descripcion, String producto, String cantidad) {
         NombreAlmacen = nombre;
         NombreProducto = producto;
         Descripcion = descripcion;
+        Cantidad = cantidad;
+    }
+
+    public String getCantidad() {
+        return Cantidad;
+    }
+
+    public void setCantidad(String cantidad) {
+        Cantidad = cantidad;
     }
 
     public String getNombreAlmacen() {

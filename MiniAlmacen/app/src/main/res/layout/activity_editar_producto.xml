@@ -12,30 +12,134 @@
     android:orientation="vertical"
     tools:context="com.example.abrahamxsaboter.minialmacen.EditarProducto">
 
-    <TextView
-        android:layout_marginBottom="15dp"
-        android:id="@+id/nomProducto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="nombre del producto"/>
-    <TextView
-        android:layout_marginBottom="15dp"
-        android:id="@+id/Descripcion"
+        android:orientation="vertical"
+        >
+        <!--Titulo-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titulo_editar_prod"
+            android:text="Confirmación de registro"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1" />
+        </LinearLayout>
+
+        <!--nom producto-->
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descripción"/>
-    <TextView
-        android:id="@+id/Tipo"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tipo"/>
-    <TextView
-        android:id="@+id/Cantidad"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cantidad"/>
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:text="Nombre del producto: "/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:id="@+id/nomProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nombre del producto"/>
+        </LinearLayout>
+    </LinearLayout>
+
+        <!--Descripcion-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:text="Descripción: "/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/Descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Tipo-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:text="Tipo: "/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/Tipo"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Cantidad-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:text="Cantidad: "/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/Cantidad"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cantidad"/>
+            </LinearLayout>
+        </LinearLayout>
 
 
     <LinearLayout
@@ -47,26 +151,27 @@
         <Button
             android:layout_marginTop="25dp"
             android:layout_width="110dp"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:drawableTop="@drawable/ic_editar"
-            android:text="Editar"
+            android:text="Editar Registro"
             android:theme="@style/boton"
             android:onClick="EditData"
             />
         <Button
             android:layout_marginTop="25dp"
             android:layout_width="110dp"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:drawableTop="@drawable/ic_confirmar"
-            android:text="Confirmar"
+            android:text="Crear Almacen"
             android:theme="@style/boton"
+            android:onClick="ConfirmarAlmacen"
             />
         <Button
             android:layout_marginTop="25dp"
             android:layout_width="110dp"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:drawableTop="@drawable/ic_cancelar"
-            android:text="Cancelar"
+            android:text="Cancelar Registro"
             android:theme="@style/boton"
             android:onClick="Cancelar"
             />
@@ -91,6 +196,6 @@
             android:onClick="ActivaCamara"
             />
     </LinearLayout>
-
+</LinearLayout>
 
 </LinearLayout>
